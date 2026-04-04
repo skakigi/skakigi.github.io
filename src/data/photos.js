@@ -17,6 +17,7 @@ const photos = [
     img960: photo1_960,
     img1600: photo1_1600,
     img2400: photo1_2400,
+    zoomSrc: photo1_2400,
     alt: "Butterfly sits on flower",
   },
   {
@@ -26,6 +27,7 @@ const photos = [
     img960: photo2_960,
     img1600: photo2_1600,
     img2400: photo2_2400,
+    zoomSrc: photo2_2400,
     alt: "Lit candle in wooden lamp",
   },
 ];
