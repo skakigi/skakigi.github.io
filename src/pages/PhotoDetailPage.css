@@ -18,18 +18,26 @@
 .zoom-area {
   overflow: hidden;
   cursor: zoom-in;
+  touch-action: manipulation;
+}
+
+.zoom-area.is-zoomed {
+  touch-action: none;
 }
 
 .detail-image {
   display: block;
   width: 100%;
   height: auto;
-  transition: transform 0.15s ease;
+  transform-origin: 50% 50%;
+  transition: transform 140ms ease;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .detail-image.zoomed {
   transform: scale(2);
-  cursor: zoom-out;
+  will-change: transform;
 }
 
 .nav-button {
@@ -43,21 +51,54 @@
 }
 
 .nav-left {
-  left: 4rem;
+  left: 2rem;
 }
 
 .nav-right {
-  right: 4rem;
+  right: 2rem;
+}
+
+.detail-back-link {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+}
+
+.nav-button:hover,
+.detail-back-link:hover {
+  text-decoration: underline;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .zoom-area.is-zoomed {
+    cursor: crosshair;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .zoom-area.is-zoomed {
+    cursor: grab;
+  }
+
+  .zoom-area.is-zoomed:active {
+    cursor: grabbing;
+  }
 }
 
 @media (max-width: 900px) {
+  .photo-detail-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-frame {
+    padding: 1rem;
+  }
+
   .nav-button {
     position: static;
     transform: none;
+    display: inline-block;
     margin-top: 1rem;
-  }
-
-  .photo-detail-page {
-    flex-direction: column;
   }
 }
