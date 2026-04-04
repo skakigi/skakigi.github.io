@@ -10,7 +10,7 @@ export default function PhotoDetailPage() {
 
   if (!photo) {
     return (
-      <PageShell background="#fffaf0" color="#333333" showBackLink={true}>
+      <PageShell background="#dacfba" color="#333333" showBackLink={true}>
         <h1>Photo not found</h1>
       </PageShell>
     );
@@ -20,7 +20,7 @@ export default function PhotoDetailPage() {
   const nextPhoto = currentIndex < photos.length - 1 ? photos[currentIndex + 1] : null;
 
   return (
-    <PageShell background="#fffaf0" color="#333333" showBackLink={true}>
+    <PageShell background="#dacfba" color="#333333" showBackLink={true}>
       <div className="photo-detail-page">
         {prevPhoto && (
           <Link to={`/photography/${prevPhoto.slug}`} className="nav-button nav-left">

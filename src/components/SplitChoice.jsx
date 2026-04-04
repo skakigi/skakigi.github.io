@@ -17,7 +17,7 @@ export default function SplitChoice() {
           alignItems: 'center',
           justifyContent: 'center',
           borderRight: '1px solid #ddd',
-          background: '#fffaf0',
+          background: '#dacfba',
           cursor: 'pointer',
           textDecoration: 'none',
           color: 'inherit',
