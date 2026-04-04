@@ -13,8 +13,8 @@ export default function PhotographyPage() {
       backLabel="Home"
     >
       <div className="photography-page">
-        <h1 className="photography-title">Photography</h1>
-
+        <h1 className="photography-title">Library</h1>
+        <p className="photography-abstract">Click for more details</p>
         <div className="photo-grid">
           {photos.map((photo) => (
             <Link

@@ -8,7 +8,9 @@
 .photography-title {
   margin: 0 0 1.5rem 0;
 }
-
+.photography-abstract{
+  margin: 0 0 1.5rem 0;
+}
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
