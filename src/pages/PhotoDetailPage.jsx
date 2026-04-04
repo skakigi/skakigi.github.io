@@ -14,7 +14,6 @@ export default function PhotoDetailPage() {
   const [isDesktopHover, setIsDesktopHover] = useState(false);
 
   const imgRef = useRef(null);
-  const zoomAreaRef = useRef(null);
   const rafRef = useRef(null);
   const latestOriginRef = useRef({ x: 50, y: 50 });
   const movedDuringPointerRef = useRef(false);
@@ -157,29 +156,42 @@ export default function PhotoDetailPage() {
 
   if (!photo) {
     return (
-      <PageShell background="#dacfba" color="#333333" showBackLink={true}>
+      <PageShell
+        background="#dacfba"
+        color="#333333"
+        showBackLink={true}
+        backTo="/photography"
+        backLabel="Photography"
+      >
         <div className="photo-detail-page">
-          <h1>Photo not found</h1>
-          <Link to="/photography" className="detail-back-link">
-            Back to Photography
-          </Link>
+          <div>
+            <h1>Photo not found</h1>
+            <Link to="/photography" className="detail-back-link">
+              Back to Photography
+            </Link>
+          </div>
         </div>
       </PageShell>
     );
   }
 
   return (
-    <PageShell background="#dacfba" color="#333333" showBackLink={true}>
+    <PageShell
+      background="#dacfba"
+      color="#333333"
+      showBackLink={true}
+      backTo="/photography"
+      backLabel="Photography"
+    >
       <div className="photo-detail-page">
         {prevPhoto && (
           <Link to={`/photography/${prevPhoto.slug}`} className="nav-button nav-left">
-            ← Previous
+            ← 
           </Link>
         )}
 
         <div className="photo-frame">
           <div
-            ref={zoomAreaRef}
             className={`zoom-area ${isZoomed ? "is-zoomed" : ""}`}
             onClick={handleZoomAreaClick}
             onMouseMove={handleMouseMove}
@@ -214,7 +226,7 @@ export default function PhotoDetailPage() {
 
         {nextPhoto && (
           <Link to={`/photography/${nextPhoto.slug}`} className="nav-button nav-right">
-            Next →
+            →
           </Link>
         )}
       </div>

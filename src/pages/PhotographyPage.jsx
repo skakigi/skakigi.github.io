@@ -1,4 +1,4 @@
-import PageShell from '../components/PageShell';
+import PageShell from "../components/PageShell";
 import { Link } from "react-router";
 import photos from "../data/photos";
 import "./PhotographyPage.css";
@@ -9,9 +9,11 @@ export default function PhotographyPage() {
       background="#dacfba"
       color="#333333"
       showBackLink={true}
+      backTo="/"
+      backLabel="Home"
     >
       <div className="photography-page">
-        <h1>Photos (click for more)</h1>
+        <h1 className="photography-title">Photography</h1>
 
         <div className="photo-grid">
           {photos.map((photo) => (

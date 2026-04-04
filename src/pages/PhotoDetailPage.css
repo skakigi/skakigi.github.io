@@ -55,15 +55,17 @@
   text-decoration: none;
   color: #333333;
   font-weight: 500;
+  font-size: 5rem;
+  padding: 0.5rem 0.75rem;
   z-index: 1000;
 }
 
 .nav-left {
-  left: 30rem;
+  left: 20rem;
 }
 
 .nav-right {
-  right: 30rem;
+  right: 20rem;
 }
 
 .detail-back-link {
@@ -74,7 +76,7 @@
 
 .nav-button:hover,
 .detail-back-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 @media (hover: hover) and (pointer: fine) {

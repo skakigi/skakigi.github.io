@@ -1,32 +1,26 @@
-import BackLink from './BackLink';
+import { Link } from "react-router";
+import "./PageShell.css";
 
 export default function PageShell({
   children,
-  background = '#ffffff',
-  color = '#111111',
+  background,
+  color,
   showBackLink = false,
-  backLinkColor,
-  maxWidth = '1100px',
+  backTo = "/",
+  backLabel = "Back",
 }) {
   return (
-    <main
-      style={{
-        minHeight: '100dvh',
-        background,
-        color,
-        padding: '24px',
-      }}
-    >
-      <div
-        style={{
-          width: '100%',
-          maxWidth,
-          margin: '0 auto',
-        }}
-      >
-        {showBackLink && <BackLink color={backLinkColor || color} />}
-        {children}
-      </div>
-    </main>
+    <div className="page-shell" style={{ background, color }}>
+      {showBackLink && (
+        <Link
+          to={backTo}
+          className="page-shell-back-link"
+          style={{ color }}
+        >
+          ← {backLabel}
+        </Link>
+      )}
+      {children}
+    </div>
   );
 }

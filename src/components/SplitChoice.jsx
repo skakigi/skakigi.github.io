@@ -24,8 +24,8 @@ export default function SplitChoice() {
         }}
       >
         <div style={{ textAlign: 'center' }}>
-          <h2>Sun</h2>
-          <p>Photography</p>
+          <h2 style={{fontSize:'5rem'}}>Sun</h2>
+          <p style={{fontSize: '3rem'}}> Photography</p>
         </div>
       </Link>
 
@@ -42,8 +42,8 @@ export default function SplitChoice() {
         }}
       >
         <div style={{ textAlign: 'center' }}>
-          <h2>Moon</h2>
-          <p>Engineering</p>
+          <h2 style={{fontSize:'5rem'}}> Moon</h2>
+          <p style={{fontSize: '3rem'}}>Engineering</p>
         </div>
       </Link>
     </section>

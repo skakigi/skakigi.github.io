@@ -1,18 +1,24 @@
 .photography-page {
   width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.photography-title {
+  margin: 0 0 1.5rem 0;
 }
 
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 1.5rem;
 }
 
 .photo-card {
   display: block;
-  overflow: hidden;
   text-decoration: none;
+  overflow: hidden;
 }
 
 .photo-image {
@@ -20,4 +26,16 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
