@@ -8,6 +8,11 @@ import photo2_960 from "../assets/photography/candle_Japan_Summer_2025/candle_96
 import photo2_1600 from "../assets/photography/candle_Japan_Summer_2025/candle_1600.jpg";
 import photo2_2400 from "../assets/photography/candle_Japan_Summer_2025/candle_2400.jpg";
 
+import photo3_Thumb from "../assets/photography/biwako_Japan_Summer_2025/biwako_640.jpg";
+import photo3_1300 from "../assets/photography/biwako_Japan_Summer_2025/biwako_1300.jpg";
+import photo3_2150 from "../assets/photography/biwako_Japan_Summer_2025/biwako_2150.jpg";
+import photo3_3200 from "../assets/photography/biwako_Japan_Summer_2025/biwako_3200.jpg";
+
 
 const photos = [
   {
@@ -30,6 +35,18 @@ const photos = [
     zoomSrc: photo2_2400,
     alt: "Lit candle in wooden lamp",
   },
+  {
+    slug: "biwako_2025",
+    title: "Lake View",
+    thumb: photo3_Thumb,
+    img960: photo3_1300,
+    img1600: photo3_2150,
+    img2400: photo3_3200,
+    zoomSrc: photo3_3200,
+    alt: "Overlook of Lake Biwa",
+  },
+
+  
 ];
 
 export default photos;
