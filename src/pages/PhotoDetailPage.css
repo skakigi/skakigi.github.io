@@ -95,14 +95,21 @@
 
 @media (max-width: 900px) {
   .photo-detail-page {
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "frame frame"
+      "prev next";
+    align-items: start;
+    width: 100%;
   }
 
   .photo-frame {
+    grid-area: frame;
     padding: 1rem;
-    width: 100%;
+    width: fit-content;
     max-width: 100%;
+    margin: 0 auto;
     display: flex;
   }
 
@@ -115,15 +122,17 @@
     position: static;
     transform: none;
     display: block;
-    width: 100%;
+    width: auto;
     margin: 1rem 0 0 0;
   }
 
   .nav-left {
+    grid-area: prev;
     text-align: left;
   }
 
   .nav-right {
+    grid-area: next;
     text-align: right;
   }
 }

@@ -11,7 +11,7 @@ export default function PhotographyPage() {
       showBackLink={true}
     >
       <div className="photography-page">
-        <h1>Photography</h1>
+        <h1>Photos (click for more)</h1>
 
         <div className="photo-grid">
           {photos.map((photo) => (
