@@ -157,7 +157,7 @@ export default function PhotoDetailPage() {
   if (!photo) {
     return (
       <PageShell
-        background="#dacfba"
+        background="background.default"
         color="#333333"
         showBackLink={true}
         backTo="/photography"
@@ -177,7 +177,7 @@ export default function PhotoDetailPage() {
 
   return (
     <PageShell
-      background="#dacfba"
+      background="background.default"
       color="#333333"
       showBackLink={true}
       backTo="/photography"

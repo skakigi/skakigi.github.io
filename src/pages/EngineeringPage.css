@@ -1,0 +1,97 @@
+.engineering-page {
+  width: 100%;
+  padding: 1rem 2rem 3rem;
+  box-sizing: border-box;
+}
+
+.engineering-header {
+  margin-bottom: 2.5rem;
+}
+
+.engineering-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+  font-weight: 600;
+  color: #bd93f9;
+}
+
+.engineering-header p {
+  margin: 1rem 0 0;
+  max-width: 700px;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  line-height: 1.7;
+  color: #f8f8f2;
+  opacity: 0.9;
+}
+
+.engineering-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  background: #44475a;
+  border: 1px solid #6272a4;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.project-card h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #8be9fd;
+}
+
+.project-card p {
+  margin: 1rem 0 1.25rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #f8f8f2;
+  opacity: 0.92;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.project-tag--tech {
+  background: #6272a4;
+  color: #f8f8f2;
+}
+
+.project-tag--status {
+  background: #50fa7b;
+  color: #282a36;
+}
+
+.project-tag--status-secondary {
+  background: #ffb86c;
+  color: #282a36;
+}
+
+@media (max-width: 900px) {
+  .engineering-page {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .engineering-projects {
+    grid-template-columns: 1fr;
+  }
+}

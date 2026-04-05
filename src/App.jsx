@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage.jsx';
 import PhotographyPage from './pages/PhotographyPage.jsx';
 import EngineeringPage from './pages/EngineeringPage.jsx';
 import PhotoDetailPage from './pages/PhotoDetailPage.jsx';
+import './App.css'
 
 export default function App() {
   return (

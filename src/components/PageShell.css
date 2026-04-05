@@ -1,11 +1,13 @@
 .page-shell {
   min-height: 100vh;
-  padding: 1.5rem 2rem;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .page-shell-back-link {
   display: inline-block;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
   margin-bottom: 1.25rem;
   text-decoration: none;
   font-size: 2rem;

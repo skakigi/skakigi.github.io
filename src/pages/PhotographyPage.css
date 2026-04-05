@@ -2,15 +2,27 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 2rem 2rem;
   box-sizing: border-box;
 }
 
 .photography-title {
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 0.35rem 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #2c2a28;
 }
-.photography-abstract{
-  margin: 0 0 1.5rem 0;
+
+.photography-abstract {
+  margin: 0 0 2rem 0;
+  max-width: 620px;
+  font-size: clamp(0.98rem, 1.3vw, 1.08rem);
+  line-height: 1.7;
+  color: rgba(44, 42, 40, 0.78);
 }
+
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -28,6 +40,11 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  transition: opacity 160ms ease;
+}
+
+.photo-card:hover .photo-image {
+  opacity: 0.97;
 }
 
 @media (max-width: 1200px) {
@@ -37,6 +54,18 @@
 }
 
 @media (max-width: 800px) {
+  .photography-page {
+    padding: 0 1rem 1.5rem;
+  }
+
+  .photography-title {
+    font-size: clamp(1.7rem, 7vw, 2.3rem);
+  }
+
+  .photography-abstract {
+    margin-bottom: 1.25rem;
+  }
+
   .photo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

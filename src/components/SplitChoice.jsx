@@ -1,51 +1,98 @@
-import { Link } from 'react-router';
+import Box from "@mui/system/Box";
+import { Link } from "react-router";
 
 export default function SplitChoice() {
   return (
-    <section
-      style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
+    <Box
+      component="section"
+      sx={{
+        display: "grid",
+        gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
         flex: 1,
-        width: '100%',
+        width: "100%",
       }}
     >
-      <Link
+      <Box
+        component={Link}
         to="/photography"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRight: '1px solid #ddd',
-          background: '#dacfba',
-          cursor: 'pointer',
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
+        sx={(theme) => ({
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRight: { md: `1px solid ${theme.site.splitBorder}` },
+          borderBottom: { xs: `1px solid ${theme.site.splitBorder}`, md: "none" },
+          bgcolor: theme.site.photographyBg,
+          color: theme.site.photographyText,
+          cursor: "pointer",
+          textDecoration: "none",
+          minHeight: { xs: "40vh", md: "auto" },
+        })}
       >
-        <div style={{ textAlign: 'center' }}>
-          <h2 style={{fontSize:'3rem'}}>Sun</h2>
-          <p style={{fontSize: '2rem'}}> Photography</p>
-        </div>
-      </Link>
+        <Box sx={{ textAlign: "center" }}>
+          <Box
+            component="h2"
+            sx={{
+              m: 0,
+              fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
+              fontWeight: 500,
+              lineHeight: 1.05,
+            }}
+          >
+            Sun
+          </Box>
 
-      <Link
+          <Box
+            component="p"
+            sx={{
+              mt: 1,
+              mb: 0,
+              fontSize: "clamp(1.25rem, 2.5vw, 2rem)",
+            }}
+          >
+            Photography
+          </Box>
+        </Box>
+      </Box>
+
+      <Box
+        component={Link}
         to="/engineering"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: '#1e1f29',
-          color: 'white',
-          cursor: 'pointer',
-          textDecoration: 'none',
-        }}
+        sx={(theme) => ({
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          bgcolor: theme.site.engineeringBg,
+          color: theme.site.engineeringText,
+          cursor: "pointer",
+          textDecoration: "none",
+          minHeight: { xs: "40vh", md: "auto" },
+        })}
       >
-        <div style={{ textAlign: 'center' }}>
-          <h2 style={{fontSize:'3rem'}}> Moon</h2>
-          <p style={{fontSize: '2rem'}}>Engineering</p>
-        </div>
-      </Link>
-    </section>
+        <Box sx={{ textAlign: "center" }}>
+          <Box
+            component="h2"
+            sx={{
+              m: 0,
+              fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
+              fontWeight: 500,
+              lineHeight: 1.05,
+            }}
+          >
+            Moon
+          </Box>
+
+          <Box
+            component="p"
+            sx={{
+              mt: 1,
+              mb: 0,
+              fontSize: "clamp(1.25rem, 2.5vw, 2rem)",
+            }}
+          >
+            Engineering
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }
